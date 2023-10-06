@@ -1,7 +1,7 @@
 import weather from "./modules/weather";
 
 const searchForm = document.getElementById("searchForm");
-const locationInput = document.getElementById("locationInput");
+const locationInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 
 searchForm.addEventListener("submit", (e) => {
@@ -14,3 +14,5 @@ searchBtn.addEventListener("click", async () => {
   locationInput.value = "";
   console.log(weatherData);
 });
+
+window.onload(weather.getWeather("New York"));

@@ -1,3 +1,5 @@
+import dom from "./dom";
+
 const Weather = (() => {
   function convertData(data) {
     const weatherInfo = {
@@ -29,7 +31,7 @@ const Weather = (() => {
       const response = await fetch(api, { mode: "cors" });
       if (!response.ok) throw new Error(`City ${location} not found`);
       const weatherData = await response.json();
-      return convertData(weatherData);
+      return dom.loadDom(convertData(weatherData));
     } catch (error) {
       alert(error);
       return null;

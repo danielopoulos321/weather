@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <script defer src="main.js"></script>
 <body>
-    <form id="searchForm">
-        <input type="text" id="locationInput">
-        <button type="submit" id="searchBtn">Search</button>
-    </form>
+    <div class="container">
+        <div id="header">
+            <h1>Weether</h1>
+            <form id="searchForm">
+                <input type="text" id="searchInput">
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+        </div>
+        <div id="content">
+            <div id="area">
+                <h1 id="city"></h1>
+                <h3 id="region"></h3>
+                <p id="localTime"></p>
+            </div>
+        </div>
+        <div id="icon">
+            <img alt="icon" id="weatherIcon">
+        </div>
+
+    </div>
 </body>
 </html>
