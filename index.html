@@ -9,33 +9,43 @@
 </head>
 <script defer src="main.js"></script>
 <body>
-    <div class="container">
-        <div id="header">
-            <h1>Weether</h1>
-            <form id="searchForm">
-                <input type="text" id="searchInput">
-                <button type="submit" id="searchBtn">Search</button>
-            </form>
-            <div class="toggle-button-cover">
-                <div id="button-3" class="button r">
-                  <input class="checkbox" type="checkbox" id="degree">
-                  <div class="knobs"></div>
-                  <div class="layer"></div>
+    <div class="center">
+        <div class="container">
+            <div id="header">
+                <h1>Weether Network</h1>
+                <div class="toggle-button-cover">
+                    <div id="button-3" class="button r">
+                      <input class="checkbox" type="checkbox" id="degree">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+            </div>
+            <div id="interact">
+                <form id="searchForm">
+                    <input type="search" id="searchInput">
+                    <button type="submit" id="searchBtn">Search</button>
+                </form>
+            </div>
+            <div id="content">
+                <div id="area">
+                    <h1 id="city"></h1>
+                    <h4 id="region"></h4>
+                    <p id="localTime"></p>
                 </div>
-              </div>
-        </div>
-        <div id="content">
-            <div id="area">
-                <h1 id="city"></h1>
-                <h4 id="region"></h4>
-                <p id="localTime"></p>
+            </div>
+            <div id="current">
+                <h1 id="condition"></h1>
+                <div id="currentTemp">
+                    <h1 id="temp"></h1>
+                    <img alt="icon" id="weatherIcon">
+                </div>
+            </div>
+            <div id="details">
+                <h2 id="wind"></h2>
+                <h2 id="humidity"></h2>
             </div>
         </div>
-        <div id="icon">
-            <h1 id="temp"></h1>
-            <img alt="icon" id="weatherIcon">
-        </div>
-
     </div>
 </body>
 </html>
