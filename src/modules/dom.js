@@ -13,9 +13,21 @@ function updateLocation(location) {
   localTime.innerHTML = location.localtime;
 }
 
+function updateTemp(weatherObject) {
+  const degree = document.getElementById("degree");
+  const temp = document.getElementById("temp");
+
+  if (degree.checked) {
+    temp.innerHTML = `${weatherObject.temperature.temp_f} °F`;
+  } else {
+    temp.innerHTML = `${weatherObject.temperature.temp_c} °C`;
+  }
+}
+
 function loadDom(weatherObject) {
   addIcon(weatherObject.condition.icon);
   updateLocation(weatherObject.location);
+  updateTemp(weatherObject);
 }
 
-export default { loadDom };
+export default { loadDom, updateTemp };
