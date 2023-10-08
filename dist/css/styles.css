@@ -16,7 +16,7 @@ body {
 
 .container {
     width: 40%;
-    min-width: 400px;
+    min-width: 375px;
     margin-top: 1em;
     border-radius: 2em;
     display: grid;
