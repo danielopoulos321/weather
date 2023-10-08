@@ -1,6 +1,12 @@
-function addIcon(iconUrl) {
+function updateCondition(weatherObject) {
   const icon = document.getElementById("weatherIcon");
-  icon.src = `https:${iconUrl}`;
+  const condition = document.getElementById("condition");
+  const wind = document.getElementById("wind");
+  const humidity = document.getElementById("humidity");
+  icon.src = `https:${weatherObject.condition.icon}`;
+  condition.innerHTML = weatherObject.condition.text;
+  wind.innerHTML = `Wind Speed: ${weatherObject.condition.wind} Km/H`;
+  humidity.innerHTML = `Humidity: ${weatherObject.condition.humidity}%`;
 }
 
 function updateLocation(location) {
@@ -25,7 +31,7 @@ function updateTemp(weatherObject) {
 }
 
 function loadDom(weatherObject) {
-  addIcon(weatherObject.condition.icon);
+  updateCondition(weatherObject);
   updateLocation(weatherObject.location);
   updateTemp(weatherObject);
 }

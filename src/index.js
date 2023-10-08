@@ -13,10 +13,14 @@ searchForm.addEventListener("submit", (e) => {
 
 searchBtn.addEventListener("click", async () => {
   if (locationInput.value === "") return;
-  weatherData = await weather.getWeather(locationInput.value);
-  dom.loadDom(weatherData);
-  locationInput.value = "";
-  console.log(weatherData);
+  try {
+    weatherData = await weather.getWeather(locationInput.value);
+    dom.loadDom(weatherData);
+    locationInput.value = "";
+    console.log(weatherData);
+  } catch (error) {
+    locationInput.value = "";
+  }
 });
 
 unitCheckbox.addEventListener("change", () => {
@@ -24,6 +28,6 @@ unitCheckbox.addEventListener("change", () => {
 });
 
 window.onload = async () => {
-  weatherData = await weather.getWeather("New York"); // Call the function here
+  weatherData = await weather.getWeather("New York");
   dom.loadDom(weatherData);
 };

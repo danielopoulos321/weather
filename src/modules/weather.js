@@ -29,9 +29,10 @@ const Weather = (() => {
       const response = await fetch(api, { mode: "cors" });
       if (!response.ok) throw new Error(`City ${location} not found`);
       const weatherData = await response.json();
+      console.log(weatherData);
       return convertData(weatherData);
     } catch (error) {
-      console.log(error);
+      alert(error);
       return null;
     }
   }
